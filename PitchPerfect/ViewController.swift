@@ -14,6 +14,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func recordAudio(_ sender: Any) {
+        print("record Button was pressed")
+    }
 }
 
