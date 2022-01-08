@@ -22,7 +22,21 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Record"/>
                                 <connections>
-                                    <action selector="recordiAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5gu-1D-c7U"/>
+                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ah4-IS-Otv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hss-aJ-Le7">
+                                <rect key="frame" x="154" y="476.5" width="106" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MpE-lU-6Wd">
+                                <rect key="frame" x="145" y="505.5" width="124" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Stop Recording"/>
+                                <connections>
+                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XJS-Oy-Heu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -30,9 +44,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="uaf-EU-qxv" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="1c5-az-N0b"/>
+                            <constraint firstItem="Hss-aJ-Le7" firstAttribute="top" secondItem="uaf-EU-qxv" secondAttribute="bottom" constant="8" id="FSg-do-Wx2"/>
                             <constraint firstItem="uaf-EU-qxv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XKr-M1-Rn6"/>
+                            <constraint firstItem="Hss-aJ-Le7" firstAttribute="centerX" secondItem="uaf-EU-qxv" secondAttribute="centerX" id="Zjd-XL-6ez"/>
+                            <constraint firstItem="MpE-lU-6Wd" firstAttribute="top" secondItem="Hss-aJ-Le7" secondAttribute="bottom" constant="8" symbolic="YES" id="tH5-yH-ddn"/>
+                            <constraint firstItem="MpE-lU-6Wd" firstAttribute="centerX" secondItem="Hss-aJ-Le7" secondAttribute="centerX" id="uaI-YI-KKg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="recordingLabel" destination="Hss-aJ-Le7" id="YOh-Rg-9W4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
